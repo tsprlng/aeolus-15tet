@@ -145,6 +145,7 @@ public:
 	float		   _fsamp;
 	float		   _fbase;
 	float		  *_scale;
+	unsigned char _scale_divisions;
 	Addsynth	   *_sdef;
 	Rankwave	   *_wave;
 	const char	 *_path;

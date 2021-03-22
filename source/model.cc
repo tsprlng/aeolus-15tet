@@ -573,12 +573,13 @@ void Model::proc_rank (int g, int i, int comm)
 			if (R->_wave->modif ())
 			{
 				M = new M_def_rank (comm);
-   				M->_fsamp = _audio->_fsamp;
+				M->_fsamp = _audio->_fsamp;
 				M->_fbase = _fbase;
+				M->_scale_divisions = scales [_itemp]._octave_divisions;
 				M->_scale = scales [_itemp]._data;
 				M->_sdef  = R->_sdef;
 				M->_wave  = R->_wave;
-  				M->_path  = _waves;
+				M->_path  = _waves;
 				send_event (TO_SLAVE, M);
 			}
 		}
@@ -592,6 +593,7 @@ void Model::proc_rank (int g, int i, int comm)
 			M->_ifelm = i;
 			M->_fsamp = _audio->_fsamp;
 			M->_fbase = _fbase;
+			M->_scale_divisions = scales [_itemp]._octave_divisions;
 			M->_scale = scales [_itemp]._data;
 			M->_sdef  = R->_sdef;
 			M->_wave  = R->_wave;

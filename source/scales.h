@@ -26,11 +26,12 @@ struct temper
 {
 	const char *_label;
 	const char *_mnemo;
+	unsigned char _octave_divisions;
 	float	  *_data;
 };
 
 
-#define NSCALES 11
+#define NSCALES 12
 
 extern struct temper scales [NSCALES];
   

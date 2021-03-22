@@ -231,20 +231,42 @@ float scale_pure_cfg [12] =
 	1.87500000,
 };
 
+// 15tet
+
+float scale_15tet [15] =
+{
+	1.0,
+	1.0472941228206267,
+	1.096824979694626,
+	1.148698354997035,
+	1.2030250360821166,
+	1.2599210498948732,
+	1.3195079107728942,
+	1.381912879967776,
+	1.4472692374403782,
+	1.515716566510398,
+	1.5874010519681994,
+	1.6624757922855755,
+	1.7411011265922482,
+	1.8234449771164336,
+	1.9096832078208332,
+};
+
 
 
 struct temper scales [NSCALES] =
 {
-	{ "Pythagorean", "pyt", scale_pythagorean },
-	{ "Meantone 1/4", "mtq", scale_meanquart },
-	{ "Werckmeister III", "we3", scale_werckm3 },
-	{ "Kirnberger III", "ki3", scale_kirnberg3 },
-	{ "Well Tempered", "wt",  scale_welltemp },
-	{ "Equally Tempered", "et", scale_equaltemp },
-	{ "Vogel/Ahrend", "ahr", scale_ahrend },
-	{ "Vallotti", "val", scale_vallotti },
-	{ "Kellner", "kel", scale_kellner },
-	{ "Lehman", "leh", scale_lehman },
-	{ "Pure C/F/G", "cfg", scale_pure_cfg },
+	{ "Pythagorean", "pyt", 12, scale_pythagorean },
+	{ "Meantone 1/4", "mtq", 12, scale_meanquart },
+	{ "15tet", "e15", 15, scale_15tet },
+	{ "Werckmeister III", "we3", 12, scale_werckm3 },
+	{ "Kirnberger III", "ki3", 12, scale_kirnberg3 },
+	{ "Well Tempered", "wt",  12, scale_welltemp },
+	{ "Equally Tempered", "et", 12, scale_equaltemp },
+	{ "Vogel/Ahrend", "ahr", 12, scale_ahrend },
+	{ "Vallotti", "val", 12, scale_vallotti },
+	{ "Kellner", "kel", 12, scale_kellner },
+	{ "Lehman", "leh", 12, scale_lehman },
+	{ "Pure C/F/G", "cfg", 12, scale_pure_cfg },
 };
 

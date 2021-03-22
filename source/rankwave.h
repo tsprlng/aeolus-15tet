@@ -121,7 +121,7 @@ public:
 	int  n1 (void) const { return _n1; }
 	void play (int shift);
 	void set_param (float *out, int del, int pan);
-	void gen_waves (Addsynth *D, float fsamp, float fbase, float *scale);
+	void gen_waves (Addsynth *D, float fsamp, float fbase, unsigned char scale_degrees, float *scale);
 	int  save (const char *path, Addsynth *D, float fsamp, float fbase, float *scale);
 	int  load (const char *path, Addsynth *D, float fsamp, float fbase, float *scale);
 	bool modif (void) const { return _modif; }
